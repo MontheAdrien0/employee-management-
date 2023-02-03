@@ -1,0 +1,44 @@
+    public class Employee 
+{ 
+    public int EmployeeId { get; set; } 
+ public string FirstName { get; set; } 
+ public string LastName { get; set; } 
+ public DateTime DateOfJoining { get; set; } 
+
+    public void ShowEmployee() 
+    {  
+        //Executes a procedure to retrieve and display employee data.  
+    }  
+
+    public void AddEmployee(Employee employee) 
+    {  
+        //Executes a procedure to add an employee into the database.  
+    }     
+
+    public void UpdateEmployeeDetails(int employeeId, Employee employee) 
+     {  
+        //Execute a procedure to update employee details against the given Id.  
+     }         
+
+    public void DeleteEmployee(int id) 
+     {  
+        //Executes a procedure to delete an employee from the database.     
+
+     }                                                             
+
+    public List<Employee> GetAllEmployees()                   
+
+     {   //Executes a procedure to retrieve all employees from database and returns them as list.            
+
+      }           
+
+      public List<Employee> SearchForEmployeesByNameOrEmail(string option,string keyword){//Executes a procedure to search for employees using name or email and return them as list.}        
+
+      public double CalculateSalary(int id){//Calcultes salary based on input parameters and returns as double}.              
+
+       private void SendNotificationToClient(int id,string message)               
+
+       {   //Send notification to client using 3rd party API}      
+       LocalizedString GetLocalizedTexts(){//Returns localized string depending on current language selected by user. }}      
+       View: <table> <thead> <tr> <th>First Name</th><th>Last Name</th><th>Date of Joining</th><th></th></tr></thead><tbody></@foreach (var employees in Model.employees)"<tr><td>"@employees.FirstName"</td><td>"@employees.LastName"</td><td>"@employees.DateOfJoining"</td><td ><a href='/Edit/"@employees.Id"'>Edit</a >| <a href='/Delete/"@employees.Id"'>Delete</a /> </td></tr>" @endforeach </tbody></table Generates HTML code for displaying table with all employees data Controller: EmployeesController{public ActionResult Index(){var model = new EmployeesModel();model = modelGetAllEmployess();return View("Index",model);}public ActionResult Edit(int id){var model = new EmployeesModel(); model = modelSearchForEmployessById(id);return View("Edit",model);}HttpPostpublic ActionResult Edit (Employe emp){bool suceessed = false ;suceessed = modelUpdateEmplyeeDetails (emp);if (suceessed )return RedirectToAction("Index");else return BadRequest ("Failed To Update") ;}public ActionResultdelete (int id){modedelleteEmpoylee (id ); 
+       if (sucess){return RedirectToAction("Index");else return BadRequest ("Failed To Delete") ;}}
