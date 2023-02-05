@@ -41,9 +41,7 @@ Make sure you install node modules in both frontend and backend using npm instal
 create .env file in your backend project Example of .env file (this file is present with the name .envexample):
 
 PORT=4000
-
 DATABASEURL=mongodb+srv://[username:password@]host1[:port1],...hostN[:portN]][/[defaultthdb][?options]]
-
 JWTKEY=set_your_jwt_key
 
 
